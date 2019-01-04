@@ -51,6 +51,7 @@ public class MemberListFragment extends BaseListFragment {
         }
         page++;
         for (int i = 0; i < 10; i++) {
+
             members.add(new MemberBean("188****999" + i, type + "普通会员", "10.00", "2018-12-20 12:40"));
         }
         //1-直推，2-间推
