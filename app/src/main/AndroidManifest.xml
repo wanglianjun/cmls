@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dy.cmls">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission
+        android:name="android.permission.SET_DEBUG_APP"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- AppThemeCMLS -->
+    <application
+        android:name=".CMLSApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_l"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_l"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeCMLS"
+        tools:replace="android:theme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.dy.cmls.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".mstart.MainActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mstart.GuideActivity"
+            android:theme="@style/BgWhiteFontBlack" />
+        <activity
+            android:name=".mstart.StartActivity"
+            android:theme="@style/BgWhiteFontBlack">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mhome.BuyVipActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mhome.QiandaoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mhome.GuiZeActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.AddCreditCardActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.CreditCardInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.EditCreditCardActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.PlanListActivity"
+            android:theme="@style/BgWhiteFontBlack" />
+        <activity
+            android:name=".mkabao.activity.PlanInfoActivity"
+            android:theme="@style/BgWhiteFontBlack" />
+        <activity
+            android:name=".mkabao.activity.AddPlanActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.PlanPreviewActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.ZhangdanActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.ZhangDanInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.BuyUsufructActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.UserInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.EditInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.SettingActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".common.WebViewActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".common.PhotoViewActivity"
+            android:theme="@style/BgMain" />
+        <activity android:name=".mine.activity.MyInviteActivity" />
+        <activity
+            android:name=".mine.activity.InviteLogActivity"
+            android:theme="@style/BgMain" />
+        <activity android:name=".mine.activity.MemberManageActivity" />
+        <activity android:name=".mine.activity.MyScoreActivity" />
+        <activity android:name=".mine.activity.SafetyCenterActivity" />
+        <activity
+            android:name=".mine.activity.SafetyEditActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.SafetyCardListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.BindCardActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.SafetyShiMingActivity"
+            android:theme="@style/BgMain" />
+        <activity android:name=".mine.activity.ZiJinFlowActivity" />
+        <activity
+            android:name=".mall.selmall.SelHomeActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.SearchActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.CollectListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.MyEvaActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.EvaActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.SelGoodsInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.SelLocationListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.SelOrderConfirmActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.PayActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.OrderListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.MyOrderActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.OrderInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.ReturnApplyActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.selmall.activity.ReturnInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.EditWuliuActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mstart.LoginActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mstart.RegActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.MyWalletActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.WalletListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.NoticeListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.activity.MyLocationListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mine.AddLocationActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.ShouKuanActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.SelectCardActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mkabao.activity.ShouKuanLogActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mstart.ForgetPassActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.MultiHomeActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.SellerListActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.SelectAreaActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.SellerInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.SellerEnterActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.SellerDesActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.EnterStatusActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mall.multimall.activity.ApplyEnterActivity"
+            android:theme="@style/BgMain" />
+        <activity
+            android:name=".mhome.NoticeInfoActivity"
+            android:theme="@style/BgMain" />
+        <activity android:name=".mine.activity.AboutActivity"
+            android:theme="@style/BgMain" />
+
+        <!-- 百度地图 start -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="z9INBtdCpBgL7IeVDfBiucvMaf4dY9ZI" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 百度地图 end -->
+
+
+    </application>
+
+</manifest>

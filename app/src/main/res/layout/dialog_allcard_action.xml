@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@mipmap/kf_bg_jia_sanka"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAddCard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_gray_selector_mask"
+                    android:drawableLeft="@mipmap/kf_ic_chuxu"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:text="添加收款储蓄卡"
+                    style="@style/text_title_14_black2"/>
+
+                <View style="@style/view_1dp_gray_heng"/>
+
+                <TextView
+                    android:id="@+id/tvAddCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_gray_selector_mask"
+                    android:drawableLeft="@mipmap/kf_ic_chuxu"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:text="添加收款信用卡"
+                    style="@style/text_title_14_black2"/>
+
+                <View style="@style/view_1dp_gray_heng"/>
+
+                <TextView
+                    android:id="@+id/tvAddCard3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_gray_selector_mask"
+                    android:drawableLeft="@mipmap/kf_ic_chuxu"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:text="添加还款信用卡"
+                    style="@style/text_title_14_black2"/>
+
+                <View style="@style/view_1dp_gray_heng"/>
+
+                <TextView
+                    android:id="@+id/tvAddCard4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_gray_selector_mask"
+                    android:drawableLeft="@mipmap/kf_ic_chuxu"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:text="添加唯一提现卡"
+                    style="@style/text_title_14_black2"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

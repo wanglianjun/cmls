@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_qiand"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:maxLines="3"
+        android:text="勒法式马卡龙甜点24枚西式糕点心小蛋糕甜品零食品勒法式马卡龙甜点24枚西式糕点心小蛋糕甜品零食品"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_marginStart="36dp"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:text="去评价"
+        android:gravity="center"
+        app:stroke_color="@color/app_main"
+        app:stroke_width="0.8dp"
+        app:corners_radius="12dp"
+        android:textColor="@color/app_main"
+        android:textSize="12sp"
+        tools:ignore="MissingPrefix" />
+</LinearLayout>
+    <View style="@style/view_1dp_gray_heng"/>
+</LinearLayout>

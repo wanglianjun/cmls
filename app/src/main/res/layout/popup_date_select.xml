@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivLast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/pop_date_tv"
+            android:padding="12dp"
+            android:src="@mipmap/icon_select"/>
+
+        <TextView
+            android:id="@+id/pop_date_tv"
+            style="@style/text_title_14_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="10月，2016"/>
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/pop_date_tv"
+            android:padding="12dp"
+            android:src="@mipmap/icon_select"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_main"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/pop_date_include1"
+                layout="@layout/include_date"/>
+
+            <include
+                android:id="@+id/pop_date_include2"
+                layout="@layout/include_date"/>
+
+            <include
+                android:id="@+id/pop_date_include3"
+                layout="@layout/include_date"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            style="@style/text_title_14_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:padding="12dp"
+            android:text="确定"
+            android:textColor="@color/main_blue1"/>
+
+        <TextView
+            android:id="@+id/tvClose"
+            style="@style/text_title_14_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tvConfirm"
+            android:padding="12dp"
+            android:text="取消"/>
+    </RelativeLayout>
+</LinearLayout>

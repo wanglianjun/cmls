@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="135dp" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:lines="2"
+        android:text="瓷罐金骏眉茶叶礼盒装武夷
+山金俊眉正宗红茶"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="bottom">
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥482.9"
+            android:textColor="#ffed1c24"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总销量1563"
+            android:textColor="#ff999999"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+</LinearLayout>

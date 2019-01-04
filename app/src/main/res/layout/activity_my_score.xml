@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context="com.dy.cmls.mine.activity.MyScoreActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@mipmap/bg_jfqb">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/nav_return" />
+
+            <TextView
+                style="@style/text_title_14_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="积分"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:gravity="center"
+            android:text="当前积分"
+            android:textColor="#ffcfddff"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

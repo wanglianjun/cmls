@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bg_main" />
+
+    <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+        android:id="@+id/waveSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main"
+                android:scrollbars="vertical" />
+
+            <com.dy.cmls.view.ErrorHintView
+                android:id="@+id/ehv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"></com.dy.cmls.view.ErrorHintView>
+        </FrameLayout>
+    </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+
+</LinearLayout>

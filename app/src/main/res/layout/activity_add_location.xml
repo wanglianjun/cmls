@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context="com.dy.cmls.mine.AddLocationActivity">
+
+    <include layout="@layout/layout_title_bg_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="收货人"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请输入收货人姓名"
+                android:textColor="@color/text_black"
+                android:textColorHint="#ffc3c3c3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="手机号码"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请输入电话号码"
+                android:textColor="@color/text_black"
+                android:textColorHint="#ffc3c3c3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng" />
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="省市区"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:textColor="@color/text_black"
+                android:textColorHint="#ffc3c3c3"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_down" />
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng" />
+
+        <EditText
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="详细地址，不少于5个字"
+            android:paddingTop="12dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="#ffc3c3c3"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_default"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="设为默认地址"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            />
+        <ImageView
+            android:id="@+id/iv_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_goux"/>
+    </LinearLayout>
+    <TextView
+        style="@style/app_bt"
+        android:layout_marginTop="90dp"
+        android:id="@+id/tv_confirm"
+        android:text="确定"/>
+</LinearLayout>

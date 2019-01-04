@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.dy.cmls.mhome.GuiZeActivity">
+
+    <include layout="@layout/layout_title_bg_main" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="签到积分规则"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            />
+        <View
+            android:layout_width="53dp"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_height="wrap_content"
+        android:text="1、签到当日获得的积分实时累加，不清零
+2、首次签到获得1积分，连续签到，获得积分加速，
+      获得的积分为连续签到的天数，如第二天获得2积
+      分，第三天获得3积分等依次叠加
+2、如若中断签到，则从1积分重新开始加速
+3、签到获得的积分可以在自营商城里购买商品时抵扣
+      现金使用
+4、本活动最终解释权为财盟联商平台所有"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        />
+</LinearLayout>

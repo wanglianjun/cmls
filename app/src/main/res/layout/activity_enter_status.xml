@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.dy.cmls.mall.multimall.activity.EnterStatusActivity">
+<include layout="@layout/layout_title_bg_main"/>
+    <ImageView
+        android:layout_marginTop="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="14dp"
+        android:src="@mipmap/icon_success"/>
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="39dp"
+        android:text="支付成功，请去填写入驻资料"
+        android:textColor="#ff999999"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/tv_operation"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="130dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        app:corners_radius="18dp"
+        app:stroke_color="@color/app_main"
+        app:stroke_width="0.8dp"
+        android:text="申请入驻"
+        android:textColor="@color/app_main"
+        android:textSize="15sp"
+        tools:ignore="MissingPrefix" />
+</LinearLayout>

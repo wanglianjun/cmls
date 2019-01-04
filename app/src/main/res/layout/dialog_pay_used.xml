@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/straight_white_fill_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="请选择激活方式"
+            android:textSize="14dp"
+            style="@style/text_title_14_black"/>
+
+        <View style="@style/view_1dp_gray_heng"/>
+
+        <TextView
+            android:id="@+id/tvPay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="在线激活"
+            android:textColor="#4A5CB1"
+            android:textSize="14dp"
+            style="@style/text_title_14_black2"/>
+
+        <View style="@style/view_1dp_gray_heng"/>
+
+        <TextView
+            android:id="@+id/tvPay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="激活码激活"
+            android:textColor="#19AF80"
+            android:textSize="14dp"
+            style="@style/text_title_14_black"/>
+
+        <View style="@style/view_1dp_gray_heng"/>
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="暂不激活"
+            android:textSize="14dp"
+            style="@style/text_title_14_black2"/>
+    </LinearLayout>
+</RelativeLayout>

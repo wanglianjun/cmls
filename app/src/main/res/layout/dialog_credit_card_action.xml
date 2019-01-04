@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="85dp"
+            android:layout_marginRight="13dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bg_tank"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_unbind"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="解绑卡片"
+                    style="@style/text_title_12_black2"/>
+
+                <View style="@style/view_1dp_gray_heng"/>
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="修改资料"
+                    style="@style/text_title_12_black2"/>
+
+                <View style="@style/view_1dp_gray_heng"/>
+                <TextView
+                    android:id="@+id/tv_unfreeze"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="解冻计划"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    style="@style/text_title_12_black2"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

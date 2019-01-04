@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/v_tran"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0000" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/app_bt0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="所在地区"
+            android:textColor="#ffffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="确认"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1">
+
+            <com.dy.cmls.view.WheelView
+                android:id="@+id/wv_provice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.dy.cmls.view.WheelView>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.dy.cmls.view.WheelView
+                android:id="@+id/wv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.dy.cmls.view.WheelView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1">
+
+            <com.dy.cmls.view.WheelView
+                android:id="@+id/wv_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.dy.cmls.view.WheelView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

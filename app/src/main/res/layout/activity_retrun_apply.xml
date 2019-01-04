@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg"
+    tools:context=".mall.selmall.activity.ReturnApplyActivity">
+
+    <include layout="@layout/layout_title_bg_main"/>
+    
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="18dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_content"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="91dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_goods_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="2"
+                        android:text="艾菲勒法式马卡龙甜点24枚西式糕点心小蛋糕甜品零食品"
+                        android:textColor="#ff333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="马卡龙24枚礼盒装"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="56.20"
+                            android:textColor="@color/text_black"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/tv_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="x1"
+                            android:textColor="#ff999999"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_goods_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货物状态："
+                        android:textColor="#ff333333"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_goods_status"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="请选择"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        android:gravity="end"
+                        />
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/btn_right"/>
+                </LinearLayout>
+                <View style="@style/view_1dp_gray_heng12"/>
+                <LinearLayout
+                    android:id="@+id/ll_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tv_reason_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款原因："
+                        android:textColor="#ff333333"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_reason"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="请选择"
+                        android:textColor="#ff999999"
+                        android:textSize="11sp"
+                        android:gravity="end"
+                        />
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/btn_right"/>
+                </LinearLayout>
+                <View style="@style/view_1dp_gray_heng12"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款金额："
+                        android:textColor="#ff333333"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/rc_return_money"
+                        android:paddingStart="4dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="￥56.20"
+                        android:textColor="#ffed1c24"
+                        android:textSize="18sp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="退款说明："
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+
+                    />
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingStart="4dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:gravity="center_vertical"
+                    android:text="上传图片："
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_cer"
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    >
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="提交"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:background="@color/app_main"/>
+    
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+    <!--线宽为dashWith，线之间空隙dashGap，dashGap=0dp时，是实线 -->
+    <stroke
+        android:width="0.6dp"
+        android:color="#ddd"
+        android:dashGap="2dp"
+        android:dashWidth="6dp"/>
+</shape>
+    <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--作者：wobenxiaozu-->
+    <!--来源：CSDN-->
+    <!--原文：https://blog.csdn.net/wobenxiaozu/article/details/76289753-->
+    <!--版权声明：本文为博主原创文章，转载请附上博文链接！-->

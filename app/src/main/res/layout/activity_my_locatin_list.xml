@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dy.cmls.mine.activity.MyLocationListActivity">
+
+    <include layout="@layout/layout_title_bg_main" />
+
+    <jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout
+        android:id="@+id/waveSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:id="@+id/v_top"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_main"
+                android:scrollbars="vertical"/>
+        </FrameLayout>
+    </jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="新增收货地址"
+        android:background="@drawable/app_bt0"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_unread"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="#FFFE3535"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_oval_red"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="消息标题"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-02-08 14:30"
+            android:textColor="#ff999999"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="19dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="您好，您的信用卡(6123123412341234123)成功消费198.00......"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        />
+    <View style="@style/view_1dp_gray_heng12"/>
+</LinearLayout>

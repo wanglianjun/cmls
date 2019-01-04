@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg"
+    tools:context="com.dy.cmls.mine.activity.SafetyCenterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_awzx" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/nav_return" />
+
+            <TextView
+                style="@style/text_title_14_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="安全中心"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_number" />
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="已绑定"
+                android:textColor="#ffff9626"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_jtr"/>
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng12" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_shiming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_smrz" />
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="实名认证"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_shiming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="去设置"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_jtr"/>
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng12" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_pay_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_pay" />
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="支付密码"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_pay_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="去设置"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_jtr"/>
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng12" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_login_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_login" />
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="登录密码"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_login_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="去修改"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_jtr"/>
+        </LinearLayout>
+
+        <View style="@style/view_1dp_gray_heng12" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_card" />
+            <TextView
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="银行卡"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="6241************123"
+                android:textColor="#ffff9626"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_jtr"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

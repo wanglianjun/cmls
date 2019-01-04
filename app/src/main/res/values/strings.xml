@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">财盟联商</string>
+    <string name="provider">com.dy.cmls.fileprovider</string>
+</resources>

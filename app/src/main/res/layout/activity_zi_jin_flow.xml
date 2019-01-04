@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dy.cmls.mine.activity.ZiJinFlowActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_main">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/nav_return"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="资金流水"
+            android:textSize="18sp"
+            style="@style/text_title_14_white"/>
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/white00_white40_selector_mask"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/white00_white40_selector_mask"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="全部"
+                style="@style/text_title_14_white"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nav_xl"
+                android:layout_marginLeft="6dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

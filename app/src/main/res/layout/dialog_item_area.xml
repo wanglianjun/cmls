@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    >
+    <View style="@style/view_1dp_gray_heng"
+        android:id="@+id/v_t_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="天桥区"
+            android:textColor="#ff666666"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的位置"
+            android:textColor="#ff3570fe"
+            android:textSize="11sp"
+            android:layout_marginEnd="4dp"
+            />
+        <ImageView
+            android:id="@+id/iv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_tishi"/>
+    </LinearLayout>
+    <View style="@style/view_1dp_gray_heng"
+        android:id="@+id/v_b_line"
+        android:visibility="gone"/>
+</LinearLayout>

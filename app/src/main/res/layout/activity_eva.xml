@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".mall.selmall.activity.EvaActivity">
+
+    <include layout="@layout/layout_title_bg_main" />
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_goods"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/bg_qiand" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/tv_goods_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:text="艾菲勒法式马卡龙甜点24枚西式糕艾菲勒法式马卡龙甜点24枚西式糕点心小蛋糕甜品零食品"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="马卡龙24枚礼盒装"
+                        android:textColor="#ff999999"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:text="x1"
+                        android:textColor="#ff999999"
+                        android:textSize="10sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_bg" />
+            <LinearLayout
+                android:id="@+id/ll_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="店铺评分"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    />
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:text="产品质量"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        />
+                    <com.dy.cmls.view.MRatingBar
+                        android:id="@+id/star_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/btn_star"
+                        app:starHalf="@mipmap/btn_star_b"
+                        app:starFill="@mipmap/btn_star_sel"
+                        app:starImageSize="15dp"
+                        app:starPadding="6.6dp"
+                        app:starStep="0"
+                        app:stepSize="Full" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:text="物流服务"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        />
+                    <com.dy.cmls.view.MRatingBar
+                        android:id="@+id/star_logistics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/btn_star"
+                        app:starHalf="@mipmap/btn_star_b"
+                        app:starFill="@mipmap/btn_star_sel"
+                        app:starImageSize="15dp"
+                        app:starPadding="6.6dp"
+                        app:starStep="0"
+                        app:stepSize="Full" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:text="服务态度"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        />
+                    <com.dy.cmls.view.MRatingBar
+                        android:id="@+id/star_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:starCount="5"
+                        app:starEmpty="@mipmap/btn_star"
+                        app:starHalf="@mipmap/btn_star_b"
+                        app:starFill="@mipmap/btn_star_sel"
+                        app:starImageSize="15dp"
+                        app:starPadding="6.6dp"
+                        app:starStep="0"
+                        app:stepSize="Full" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:stroke_color="#FFDDDDDD"
+                app:stroke_width="1dp"
+                tools:ignore="MissingPrefix">
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/white"
+                    android:hint="请输入商品评价"
+                    android:textColorHint="#ffc3c3c3"
+                    android:textColor="#666666"
+                    android:gravity="top"
+                    android:textSize="15sp"
+                    android:minHeight="110dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:id="@+id/fl_1"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp">
+
+                        <ImageView
+                            android:id="@+id/iv_1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/bg_qiand" />
+
+                        <ImageView
+                            android:id="@+id/iv_c1"
+                            android:layout_width="12dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="end"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/btn_sc" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_2"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp">
+
+                        <ImageView
+                            android:id="@+id/iv_2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/btn_tian_h" />
+
+                        <ImageView
+                            android:id="@+id/iv_c2"
+                            android:layout_width="12dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="end"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/btn_sc"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_3"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/bg_qiand" />
+
+                        <ImageView
+                            android:id="@+id/iv_c3"
+                            android:layout_width="12dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="end"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/btn_sc" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_commit"
+                style="@style/app_bt"
+                android:layout_marginTop="39dp"
+                android:background="@drawable/app_bt_sel"
+                android:text="提交" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

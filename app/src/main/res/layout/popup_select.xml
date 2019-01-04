@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparentBlack80"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/straight_white_fill"
+        android:orientation="vertical">
+
+        <com.dy.cmls.view.WheelView
+            android:id="@+id/wheelView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+       </com.dy.cmls.view.WheelView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@id/llContent"
+        android:background="@drawable/bg_button">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:src="@mipmap/icon_x"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="选择还款次数"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="确认"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            style="@style/text_title_14_black"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66666666"
+    android:id="@+id/fl_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/rectangle_white_full_5"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="选择售后类型"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="end"
+                android:scaleType="centerInside"
+                android:src="@mipmap/btn_close1" />
+
+
+
+        </FrameLayout>
+        <View style="@style/view_1dp_gray_heng" />
+        <FrameLayout
+            android:id="@+id/fl_tuikuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_tuik" />
+            <TextView
+                android:layout_marginStart="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仅退款"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_marginTop="30dp"
+                android:paddingBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="未收到货（包含未签收）或商家协商同意前提下"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                />
+
+        </FrameLayout>
+        <View style="@style/view_1dp_gray_heng"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"/>
+        <FrameLayout
+            android:id="@+id/fl_tuihuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_tuih" />
+            <TextView
+                android:layout_marginStart="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款退货"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_marginTop="30dp"
+                android:paddingBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已收到货，需要退还已收到的货物"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                />
+
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

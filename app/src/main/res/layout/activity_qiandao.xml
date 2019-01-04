@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.dy.cmls.mhome.QiandaoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:background="@mipmap/bg_qiand"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@mipmap/nav_return" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="签到"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|end"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="规则"
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_jifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="10"
+                android:textColor="@color/app_main"
+                android:textSize="37sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="63dp"
+                android:text="今日签到积分"
+                android:textColor="@color/app_main"
+                android:textSize="11sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="今天还没有签到，赶紧签到领积分吧"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/btn_left" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:text="2016年11月"
+                    android:textColor="#ff333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/btn_right" />
+            </LinearLayout>
+
+            <View style="@style/view_1dp_gray_heng" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical">
+
+                <com.dy.cmls.view.calendar.MyWeekView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                </com.dy.cmls.view.calendar.MyWeekView>
+
+                <com.dy.cmls.view.calendar.MyCalendarView
+                    android:id="@+id/m_cal_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_qiandao"
+                android:layout_width="160dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/app_bt_deep_22"
+                android:gravity="center"
+                android:text="签到"
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="15dp"
+                android:text="已连续签到5天，连续签到可获得更多积分"
+                android:textColor="#ff999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

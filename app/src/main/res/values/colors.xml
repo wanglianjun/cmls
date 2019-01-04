@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4A5CB1</color>
+
+    <!--ffbcbcbc-->
+    <color name="line">#ffdddddd</color>
+    <color name="bg_main">#f0f0f0</color>
+    <!--3570FE-->
+    <color name="app_main">#3570FE</color>
+    <color name="app_main_deep">#033fff</color>
+    <color name="app_main1">#3570FE</color>
+    <color name="app_main_t">#3570FE</color>
+    <color name="app_bg">#f0f0f0</color>
+    <color name="app_red">#FF4848</color>
+    <color name="app_orange">#FF7A16</color>
+    <color name="d0">#ffd0d0d0</color>
+    <color name="c63">#636363</color>
+    <color name="c9">#999999</color>
+
+    <color name="app_main2">#4A5CB1</color>
+    <color name="app_main3">#95415299</color>
+    <color name="main_red1">#e32316</color>
+    <color name="main_red2">#f00000</color>
+    <color name="main_blue1">#51a5fa</color>
+    <color name="main_orage1">#e27717</color>
+    <color name="main_green1">#19AF80</color>
+    <color name="text_e0">#95e0e0e0</color>
+    <color name="text_title1_color">#333333</color>
+    <color name="text_title2_color">#666666</color>
+    <color name="text_title3_color">#999999</color>
+    <color name="transparentWhite00">#00ffffff</color>
+    <color name="transparentWhite40">#40ffffff</color>
+    <color name="transparentBlack40">#40000000</color>
+    <color name="transparentBlack80">#65000000</color>
+    <color name="transparentApp_main">#804A5CB1</color>
+    <color name="system_white">#FeFeFe</color>
+    <color name="text_black">#333333</color>
+    <!--加载控件-->
+    <color name="view_bg">#00000000</color>
+    <color name="shadow">#25808080</color>
+    <!--加载控件-->
+
+    <color name="white">#FFFFFFFF</color><!--白色 -->
+    <color name="black">#000000</color><!--  黑色-->
+    <!--火砖色 -->
+</resources>

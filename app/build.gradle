@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'cmls'
+            keyPassword '111111'
+            storeFile file('D:/android/android_demo/CMLS/cmls.jks')
+            storePassword '111111'
+        }
+        debug {
+        }
+    }
+    compileSdkVersion 28
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.dy.cmls"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+    android {
+        //指定jdk版本
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+
+    }
+//    packagingOptions {
+//        exclude 'META-INF/rxjava.properties'
+//    }
+
+
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    androidTestCompile ('com.android.support.test.espresso: espresso-core: 2.2.2', {
+//        exclude group: 'com.android.support',  module: 'support-annotations'
+//    })
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+    //Retrofit + Rxjava + Okhttp + Gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'io.reactivex:rxjava:1.1.5'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    //Retrofit + Rxjava + Okhttp + Gson
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    implementation 'com.qmuiteam:qmui:1.1.3'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    implementation 'com.github.panwrona:DownloadProgressBar:1.1'
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //bugly
+    implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
+    implementation 'com.tencent.bugly:crashreport:2.6.6.1'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6'
+    //图片压缩
+    implementation 'top.zibin:Luban:1.1.8'
+    //Zxing二维码扫描
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'com.android.support:multidex:1.0.3'
+    //工具类
+    implementation 'com.blankj:utilcode:1.19.4'
+    //
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.noober.backgorund:core:1.0.5'
+    implementation 'org.jsoup:jsoup:1.11.2'
+    //Banner
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
+    implementation 'liji.library.dev:citypickerview:3.0.0'
+}

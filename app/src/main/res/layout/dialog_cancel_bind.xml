@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/straight_white_fill_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCancelBind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask_10_10_0_0"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="解除绑定"
+            android:textColor="@color/app_main_t"
+            android:textSize="20dp"
+            style="@style/text_title_14_black"/>
+
+        <View
+            style="@style/view_1dp_gray_heng"/>
+        <View
+            style="@style/view_1dp_gray_heng"/>
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask_0_0_10_10"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="取消"
+            android:textSize="20dp"
+            style="@style/text_title_14_black2"/>
+    </LinearLayout>
+</LinearLayout>

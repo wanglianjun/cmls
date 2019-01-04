@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/straight_white_fill_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPaiZhao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask_10_10_0_0"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="拍照"
+            android:textSize="20dp"
+            style="@style/text_title_14_black"/>
+
+        <View
+            style="@style/view_1dp_gray_heng"/>
+
+
+        <TextView
+            android:id="@+id/tvXiangCe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask_0_0_10_10"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="从相册中选择"
+            android:textSize="20dp"
+            style="@style/text_title_14_black"/>
+
+
+        <View
+            android:visibility="visible"
+            android:id="@+id/vYuanTu"
+            style="@style/view_1dp_gray_heng"/>
+
+        <TextView
+            android:id="@+id/tvYuanTu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_gray_selector_mask_0_0_10_10"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="查看原图"
+            android:textSize="20dp"
+            android:visibility="visible"
+            style="@style/text_title_14_black"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_gray_selector_mask_10"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="取消"
+        android:textSize="20dp"
+        style="@style/text_title_14_black2"/>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.dy.cmls.mall.multimall.activity.SellerEnterActivity">
+
+    <include layout="@layout/layout_title_bg_main" />
+    <TextView
+        android:layout_marginTop="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="请先选择入驻时间，并支付相应的费用"
+        android:textColor="#ff999999"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_month_1"
+        android:layout_marginTop="40dp"
+        android:layout_width="142dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="1个月5元"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        android:background="@drawable/rectangle_gray_empty_5"
+        />
+    <TextView
+        android:id="@+id/tv_month_3"
+        android:layout_marginTop="28dp"
+        android:layout_width="142dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="3个月10元"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        android:background="@drawable/rectangle_gray_empty_5"
+        />
+    <TextView
+        android:id="@+id/tv_month_12"
+        android:layout_marginTop="28dp"
+        android:layout_width="142dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="12个月30元"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        android:background="@mipmap/selected"
+        />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/app_bt"
+        android:text="确认支付"
+        android:background="@drawable/app_bt_sel"
+        android:layout_marginTop="80dp"/>
+
+</LinearLayout>

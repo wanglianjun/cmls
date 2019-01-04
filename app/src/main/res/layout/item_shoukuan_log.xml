@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="通道名称￥5000.00"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="19dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="2018-11-28 14:32:20"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_margin="12dp"
+        android:text="成功"
+        android:textColor="#ff3570fe"
+        android:textSize="15sp"
+        />
+    <View
+        android:layout_gravity="bottom"
+        style="@style/view_1dp_gray_heng12"/>
+</FrameLayout>

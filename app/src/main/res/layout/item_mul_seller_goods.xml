@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center"
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_content"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            app:riv_corner_radius="5dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_gravity="bottom|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="￥108"
+            android:textColor="#ff333333"
+            android:textSize="11sp"
+            android:background="@drawable/rectangle_white_tran_5_0_5_0"
+            />
+    </FrameLayout>
+
+</FrameLayout>

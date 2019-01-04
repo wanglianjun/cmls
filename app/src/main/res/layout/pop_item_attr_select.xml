@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tv_attr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="拍错了"
+        android:gravity="center"
+        android:textColor="#ff333333"
+        android:textSize="15sp"
+        />
+    <View style="@style/view_1dp_gray_heng12"/>
+</LinearLayout>

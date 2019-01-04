@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/riv_head"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/bg_qiand"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="木*****A"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="马卡龙24枚礼盒装"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-10-29"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="12dp"
+            android:text="超级好吃，一个也没坏，用泡沫箱装的，还有冰袋，超贴心，打开盒子新鲜的蛋奶香，颜值高送人超有面子。"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_shop_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/beijin"
+            android:text="商家回复：感谢您购买本店商品，您的满意使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的使我们永恒的追求和动力，请多多光顾。"
+            android:textColor="#ff999999"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_tian_h" />
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_tian_h" />
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_tian_h" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View style="@style/view_1dp_gray_heng"/>
+</LinearLayout>
