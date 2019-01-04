@@ -48,12 +48,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.1">
 
-            <com.dy.cmls.view.WheelView
+            <com.dy.cmls.view.MyWheelView
                 android:id="@+id/wv_provice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </com.dy.cmls.view.WheelView>
+            </com.dy.cmls.view.MyWheelView>
         </LinearLayout>
 
 
@@ -64,12 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-            <com.dy.cmls.view.WheelView
+            <com.dy.cmls.view.MyWheelView
                 android:id="@+id/wv_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </com.dy.cmls.view.WheelView>
+            </com.dy.cmls.view.MyWheelView>
         </LinearLayout>
 
 
@@ -79,12 +79,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.1">
 
-            <com.dy.cmls.view.WheelView
+            <com.dy.cmls.view.MyWheelView
                 android:id="@+id/wv_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </com.dy.cmls.view.WheelView>
+            </com.dy.cmls.view.MyWheelView>
         </LinearLayout>
 
     </LinearLayout>

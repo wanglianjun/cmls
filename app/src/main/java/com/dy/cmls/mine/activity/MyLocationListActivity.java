@@ -6,13 +6,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.dy.cmls.CMLSConstant;
 import com.dy.cmls.R;
 import com.dy.cmls.base.BaseActivity;
+import com.dy.cmls.loader.PersonLoader;
+import com.dy.cmls.loader.bean.SimpleResBean;
 import com.dy.cmls.mine.AddLocationActivity;
 import com.dy.cmls.mine.adapter.LocationAdapter;
+import com.dy.cmls.mine.bean.AddressListBean;
 import com.dy.cmls.mine.bean.LocationBean;
+import com.dy.cmls.utils.SPUtils;
 import com.dy.cmls.view.CustomLoadMoreView;
 import com.dy.cmls.view.interfaces.AbstractVerticalScrollListener;
 
@@ -23,6 +28,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jp.co.recruit_lifestyle.android.widget.WaveSwipeRefreshLayout;
+import rx.functions.Action1;
 
 public class MyLocationListActivity extends BaseActivity {
 
@@ -55,14 +61,23 @@ public class MyLocationListActivity extends BaseActivity {
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 switch (view.getId()) {
                     case R.id.ll_default:
-                        setDefault(position);
+//                        setDefault(position);
                         break;
                     case R.id.iv_delete:
+                        del(position);
                         break;
                     case R.id.iv_edit:
                         Bundle bundle=new Bundle();
                         bundle.putBoolean("isEdit",true);
                         bundle.putString("id",list.get(position).getId());
+                        bundle.putString("name",list.get(position).getName());
+                        bundle.putString("location",list.get(position).getLocation());
+                        bundle.putString("pId",list.get(position).getpId());
+                        bundle.putString("cId",list.get(position).getcId());
+                        bundle.putString("aId",list.get(position).getaId());
+                        bundle.putString("address",list.get(position).getAddressInfo());
+                        bundle.putString("phone",list.get(position).getPhone());
+                        bundle.putBoolean("isDef",list.get(position).isIdDefault());
                         jumpToPage(AddLocationActivity.class,bundle);
                         break;
                 }
@@ -96,6 +111,7 @@ public class MyLocationListActivity extends BaseActivity {
         });
         initBRVAH();
         initRefreshView();
+
     }
 
 
@@ -106,6 +122,34 @@ public class MyLocationListActivity extends BaseActivity {
         adapter.notifyDataSetChanged();
     }
 
+    private void del(int position){
+        showProgressDialog();
+        PersonLoader.getInstance().delAddress("删除收货地址", SPUtils.getUserId(),list.get(position).getId()).subscribe(new Action1<SimpleResBean>() {
+            @Override
+            public void call(SimpleResBean bean) {
+
+                dismissProgressDialog();
+                if (CMLSConstant.REQUEST_SUCCESS.equals(bean.getStatus())) {
+                   requestList(true);
+                }
+                ToastUtils.showShort(bean.getMessage());
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                dismissProgressDialog();
+                showToastFailure();
+                showLog("删除收货地址:报异常2:", throwable.toString());
+
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        requestList(true);
+    }
 
     //BRVAH的初始化
     public void initBRVAH() {
@@ -145,24 +189,41 @@ public class MyLocationListActivity extends BaseActivity {
         });
     }
 
-    private int page;
+
 
     private void requestList(boolean refresh) {
         if (refresh) {
             list.clear();
-            page = 0;
         }
-        page++;
-        list.add(new LocationBean("李丽丽", "1233456655", "山东省济南市历山北路黄台电子商务产业园A厅16楼1616室", true));
-        list.add(new LocationBean("李丽丽", "1233456655", "山东省济南市历山北路黄台电子商务产业园A厅16楼1616室"));
-        list.add(new LocationBean("李丽丽", "1233456655", "山东省济南市历山北路黄台电子商务产业园A厅16楼1616室"));
 
-        adapter.notifyDataSetChanged();
-        setRefresh(false);
-        if (Integer.parseInt("2") <= page) {
-            adapter.loadMoreEnd(false);
-        } else
-            adapter.loadMoreComplete();
+        showProgressDialog();
+        PersonLoader.getInstance().getAddressList("获取收货地址", SPUtils.getUserId()).subscribe(new Action1<AddressListBean>() {
+            @Override
+            public void call(AddressListBean bean) {
+
+                dismissProgressDialog();
+                if (CMLSConstant.REQUEST_SUCCESS.equals(bean.getStatus())) {
+                    for (int i = 0; i < bean.getInfo().size(); i++) {
+                        list.add(new LocationBean(bean.getInfo().get(i)));
+                    }
+                }
+                adapter.notifyDataSetChanged();
+                setRefresh(false);
+                adapter.loadMoreEnd(false);
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                adapter.notifyDataSetChanged();
+                setRefresh(false);
+
+                    adapter.loadMoreEnd(false);
+                dismissProgressDialog();
+                showToastFailure();
+                showLog("获取收货地址:报异常2:", throwable.toString());
+
+            }
+        });
     }
 
     public void setRefresh(boolean refresh) {

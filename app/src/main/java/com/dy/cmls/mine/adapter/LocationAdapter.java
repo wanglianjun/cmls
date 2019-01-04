@@ -38,7 +38,7 @@ public class LocationAdapter  extends BaseQuickAdapter<LocationBean, BaseViewHol
         }
 
         helper.addOnClickListener(R.id.ll_default);
-        helper.addOnClickListener(R.id.iv_delete);
+        helper.addOnClickListener(R.id.iv_edit);
         helper.addOnClickListener(R.id.iv_delete);
     }
 

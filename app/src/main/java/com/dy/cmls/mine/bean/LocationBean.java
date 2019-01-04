@@ -10,6 +10,11 @@ public class LocationBean {
     private String phone;
     private String address;
     private boolean idDefault;
+    private String location;
+    private String addressInfo;
+    private String pId;
+    private String cId;
+    private String aId;
 
     public LocationBean(String name, String phone, String address, boolean idDefault) {
         this.name = name;
@@ -18,10 +23,64 @@ public class LocationBean {
         this.idDefault = idDefault;
     }
 
+    public LocationBean(AddressListBean.InfoBean bean) {
+        this.name = bean.getTrue_name();
+        this.phone = bean.getTel_phone();
+        this.address = bean.getProvince()+bean.getCity()+bean.getArea()+bean.getArea_info();
+        this.idDefault = bean.getIs_default().equals("1");
+        this.id=bean.getAddress_id();
+        this.location=bean.getProvince()+bean.getCity()+bean.getArea();
+        this.pId=bean.getProvince_id();
+        this.cId=bean.getCity_id();
+        this.aId=bean.getArea_id();
+        this.addressInfo=bean.getArea_info();
+    }
+
     public LocationBean(String name, String phone, String address) {
         this.name = name;
         this.phone = phone;
         this.address = address;
+    }
+
+
+    public String getAddressInfo() {
+        return addressInfo;
+    }
+
+    public void setAddressInfo(String addressInfo) {
+        this.addressInfo = addressInfo;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getpId() {
+        return pId;
+    }
+
+    public void setpId(String pId) {
+        this.pId = pId;
+    }
+
+    public String getcId() {
+        return cId;
+    }
+
+    public void setcId(String cId) {
+        this.cId = cId;
+    }
+
+    public String getaId() {
+        return aId;
+    }
+
+    public void setaId(String aId) {
+        this.aId = aId;
     }
 
     public String getId() {

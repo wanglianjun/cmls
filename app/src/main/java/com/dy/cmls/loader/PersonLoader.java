@@ -8,6 +8,7 @@ import com.dy.cmls.loader.bean.MsgListBean;
 import com.dy.cmls.loader.bean.SimpleResBean;
 import com.dy.cmls.loader.bean.SmsResBean;
 import com.dy.cmls.loader.bean.UserInfoBean;
+import com.dy.cmls.mine.bean.AddressListBean;
 import com.dy.cmls.mine.bean.MyInviteListBean;
 import com.dy.cmls.mine.bean.MyInviteResBean;
 import com.dy.cmls.mine.bean.UserPointBean;
@@ -174,8 +175,36 @@ public class PersonLoader extends ObjectLoader {
         return observe(thisService.getUse(id));
     }
 
+    //收货地址列表
+    public Observable<AddressListBean> getAddressList(String urlName,String userid ) {
+        RetrofitServiceManager.getInstance().setUrlName(urlName);
+        return observe(thisService.getAddressList(userid));
+    }
+    //添加收货地址
+    public Observable<SimpleResBean> addAddress(String urlName, String true_name,String userid
+            , String tel_phone, String province_id, String city_id, String area_id,String is_default, String area_info) {
+        RetrofitServiceManager.getInstance().setUrlName(urlName);
+        return observe(thisService.addAddress(true_name,userid,tel_phone,province_id,city_id,area_id,is_default,area_info));
+    }
 
+    //修改收货地址
+    public Observable<SimpleResBean> editAddress(String urlName, String true_name,String userid
+            , String tel_phone, String province_id, String city_id, String area_id,String is_default, String area_info,String addressId) {
+        RetrofitServiceManager.getInstance().setUrlName(urlName);
+        return observe(thisService.editAddress(true_name,userid,tel_phone,province_id,city_id,area_id,is_default,area_info,addressId));
+    }
 
+    //使用权 界面信息
+    public Observable<AreaResBean> getArea(String urlName, String id) {
+        RetrofitServiceManager.getInstance().setUrlName(urlName);
+        return observe(thisService.getArea(id));
+    }
+
+    //删除地址
+    public Observable<SimpleResBean> delAddress(String urlName, String id,String AddressId) {
+        RetrofitServiceManager.getInstance().setUrlName(urlName);
+        return observe(thisService.delAddress(id,AddressId));
+    }
     public interface ThisService {
 
         //个人中心—我的
@@ -311,10 +340,38 @@ public class PersonLoader extends ObjectLoader {
 
         @FormUrlEncoded
         @POST("MemberAddress/index")
-        Observable<SimpleResBean> getAddressList(@Field("userid") String userid);
+        Observable<AddressListBean> getAddressList(@Field("userid") String userid);
+
+//        true_name	是	string	姓名
+//        userid	是	string	用户id
+//        tel_phone	是	string	手机号
+//        province_id	是	string	省id
+//        city_id	是	string	市id
+//        area_id	是	string	地区id
+//        is_default	是	string	是否默认0-否 1-是
+//        area_info	是	string	详细地址
+        @FormUrlEncoded
+        @POST("MemberAddress/add_address")
+        Observable<SimpleResBean> addAddress(@Field("true_name") String true_name,@Field("userid") String userid
+                ,@Field("tel_phone") String tel_phone,@Field("province_id") String province_id,@Field("city_id") String city_id
+                ,@Field("area_id") String area_id,@Field("is_default") String is_default,@Field("area_info") String area_info);
 
 
 
+        @FormUrlEncoded
+        @POST("MemberAddress/edit_address")
+        Observable<SimpleResBean> editAddress(@Field("true_name") String true_name,@Field("userid") String userid
+                ,@Field("tel_phone") String tel_phone,@Field("province_id") String province_id,@Field("city_id") String city_id
+                ,@Field("area_id") String area_id,@Field("is_default") String is_default,@Field("area_info") String area_info
+                ,@Field("address_id") String address_id);
 
+        @FormUrlEncoded
+        @POST("MemberAddress/area")
+        Observable<AreaResBean> getArea(@Field("pid") String pid);
+
+
+        @FormUrlEncoded
+        @POST("MemberAddress/del")
+        Observable<SimpleResBean> delAddress(@Field("userid") String userid,@Field("address_id") String address_id);
     }
 }
